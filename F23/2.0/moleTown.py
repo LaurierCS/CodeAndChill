@@ -1,8 +1,5 @@
 import time 
 
-
-
-
 nWaypoints = int(input())
 waypoints = []
 for i in range(nWaypoints):
@@ -11,10 +8,9 @@ for i in range(nWaypoints):
 free = int(input())
 start, end = int(input()),int(input())
 print(waypoints[start],waypoints[end])
+
 def solve(waypoints,free,start,end):
-
     def getCost(waypoint1,waypoint2):
-
         x1, y1, z1 = waypoint1
         x2, y2, z2 = waypoint2
 
@@ -23,7 +19,6 @@ def solve(waypoints,free,start,end):
     print(getCost(waypoints[start],waypoints[end]))
     freeWaypoints = waypoints[:free] 
     if free:
-
         closestStart = min(freeWaypoints, key = lambda x: getCost(waypoints[start],x))
         closestEnd = min(freeWaypoints, key = lambda x: getCost(waypoints[end],x ))
     else:

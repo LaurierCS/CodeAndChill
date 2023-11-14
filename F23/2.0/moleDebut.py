@@ -18,6 +18,3 @@ for i in range(lyricLength-1,-1,-1):
         if wordPitch[lyrics[i]] < wordPitch[lyrics[j]]:
             lms[i] = max(lms[i],1+lms[j])
 print(max(lms))
-
-
-
